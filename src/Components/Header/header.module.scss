@@ -1,0 +1,73 @@
+@import '../../assets/css/_variables.scss';
+
+.headerComponent {
+    background-image: linear-gradient(15deg, $white 29%, $light-grey 30%);
+    font-family: Helvetica, sans-serif;
+    height: 482px;
+    padding: 66px 16px 0px 16px;
+    width: 420px;
+
+    article {
+
+        p {
+            color: $white;
+            margin: 0px;
+        }
+
+        :nth-child(1) {
+            font-size: 20px;
+        }
+
+        :nth-child(2) {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        :nth-child(3) {
+            font-size: 14px;
+        }
+    }
+
+    nav {
+        margin-top: 56px;
+
+
+        .gridContainer {
+            width: 100%;
+            margin: 0px;
+
+            .gridItem {
+
+                .button {
+                    width: 160px;
+                    color: $grey;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 1px 6px #00000029;
+                    border: 1px solid #707070;
+                    border-radius: 4px;
+                    font-family: Helvetica, sans-serif;
+                    font-size: 14px;
+                    opacity: 1;
+                    padding: 7px 0px;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .headerComponent {
+        background-image: linear-gradient(3deg, #FFFFFF 29%, #707070 30%);
+        width: 100vw;
+
+        nav {
+            width: 50vw;
+            margin: 56px auto 0px auto;
+        }
+
+        article {
+            text-align: center;
+        }
+    }
+}

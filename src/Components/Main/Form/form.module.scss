@@ -1,0 +1,63 @@
+@import '../../../assets/css/variables';
+
+.formComponent {
+    padding: 0px 16px 0px 16px;
+    width: 420px;
+    font-family: 'Helvetica', sans-serif;
+    color: $grey;
+
+    div {
+        
+        article {
+            display: flex;
+            align-items: center;
+            margin-bottom: 17px;
+            
+            p {
+                margin: 0px;
+                font-size: 20px;
+            }     
+        }
+        .description {
+            font-size: 12px;
+            margin: 17px 0px 30px 0px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+        label {
+            margin-bottom: 7px;
+        }
+
+        .submitButton {
+            font-size: 16px;
+            margin-bottom: 90px;
+            text-transform: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .formComponent {
+        width: 920px;
+        margin: auto;
+        display: flex;
+        gap: 60px;
+        padding: 0px;
+
+        div {
+            width: 520px;
+        }
+
+        form {
+            width: 340px;
+
+            div {
+                width: 340px;
+            }
+        }
+    }
+}
