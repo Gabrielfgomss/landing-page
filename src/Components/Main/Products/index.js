@@ -31,15 +31,10 @@ function ProductContainer() {
         }
 
         const result = await response.json();
-
-        console.log('result is: ', JSON.stringify(result, null, 4));
-
+        
         setApiObject(result);
         setProducts([...products, ...result.products]);
     };
-
-    console.log(apiObject)
-    console.log(products)
 
     return (
         <section className={styles.productComponent}>
