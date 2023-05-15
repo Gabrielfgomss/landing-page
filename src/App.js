@@ -1,5 +1,4 @@
 import Header from "./Components/Header";
-import './App.css'
 import Form from "./Components/Main/Form";
 import ProductContainer from "./Components/Main/Products";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +9,6 @@ function App() {
   return (
     <>
       <Header />
-      
       <Form />
       <ProductContainer />
       <Recomendation />

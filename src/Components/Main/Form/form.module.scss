@@ -1,25 +1,25 @@
 @import '../../../assets/css/variables';
 
 .formComponent {
-    padding: 0px 16px 0px 16px;
-    width: 420px;
+    margin: 0px 16px;
     font-family: 'Helvetica', sans-serif;
     color: $grey;
 
     div {
-        
+
         article {
             display: flex;
             align-items: center;
             margin-bottom: 17px;
-            
+
             p {
                 margin: 0px;
-                font-size: 20px;
-            }     
+                font-size: 1.5rem;
+            }
         }
+
         .description {
-            font-size: 12px;
+            font-size: 0.8rem;
             margin: 17px 0px 30px 0px;
         }
     }
@@ -27,8 +27,9 @@
     form {
         display: flex;
         flex-direction: column;
-        
+
         label {
+            font-size: 1rem;
             margin-bottom: 7px;
         }
 
@@ -40,24 +41,18 @@
     }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 678px) {
     .formComponent {
-        width: 920px;
-        margin: auto;
-        display: flex;
-        gap: 60px;
-        padding: 0px;
-
-        div {
-            width: 520px;
-        }
-
-        form {
-            width: 340px;
-
-            div {
-                width: 340px;
-            }
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .formComponent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin: 0px 15%;
     }
 }

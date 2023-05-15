@@ -29,7 +29,7 @@ function Form() {
 
     const ExpandMore = styled((props) => {
         const { expand, ...other } = props;
-        return <IconButton {...other} sx={{ display: { xs: 'block', lg: 'none' } }}/>;
+        return <IconButton {...other} sx={{ display: { xs: 'block', lg: 'none' } }} />;
     })(({ theme, expand }) => ({
         transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
         marginLeft: 'auto',
@@ -67,7 +67,7 @@ function Form() {
             <form onSubmit={formik.handleSubmit}>
                 <label htmlFor="nome">Seu nome: </label>
                 <TextField
-                    sx={{marginBottom: 3}}
+                    sx={{ marginBottom: 3 }}
                     size='small'
                     error={formik.errors.nome && formik.touched.nome ? true : false}
                     helperText={formik.errors.nome && formik.touched.nome ? formik.errors.nome : null}
@@ -76,7 +76,7 @@ function Form() {
                 />
                 <label htmlFor="email">E-mail: </label>
                 <TextField
-                    sx={{marginBottom: 3}}
+                    sx={{ marginBottom: 3 }}
                     size='small'
                     error={formik.errors.email && formik.touched.email ? true : false}
                     helperText={formik.errors.email && formik.touched.email ? formik.errors.email : null}
@@ -85,7 +85,7 @@ function Form() {
                 />
                 <label htmlFor="CPF">CPF: </label>
                 <TextField
-                    sx={{marginBottom: 3}}
+                    sx={{ marginBottom: 3 }}
                     size='small'
                     error={formik.errors.CPF && formik.touched.CPF ? true : false}
                     helperText={formik.errors.CPF && formik.touched.CPF ? formik.errors.CPF : null}
@@ -100,22 +100,22 @@ function Form() {
                         name='sexo'
                         onChange={e => handleRadioButtons(e)}
                         onBlur={formik.handleBlur}
-                        sx={formik.errors.sexo && formik.touched.sexo ? {color: 'red'}:null} />
+                        sx={formik.errors.sexo && formik.touched.sexo ? { color: 'red' } : null} />
                     <FormControlLabel
                         value="Feminio"
                         control={<Radio />}
                         label="Feminio"
                         name='sexo'
                         onChange={e => handleRadioButtons(e)}
-                        onBlur={formik.handleBlur} 
-                        sx={formik.errors.sexo && formik.touched.sexo ? {color: 'red'}:null}/>
+                        onBlur={formik.handleBlur}
+                        sx={formik.errors.sexo && formik.touched.sexo ? { color: 'red' } : null} />
                 </RadioGroup>
-                <Button 
-                    variant="outlined" 
+                <Button
+                    variant="outlined"
                     endIcon={<SendIcon />}
-                    type="submit" 
-                    size='large' 
-                    sx={{color: '#888888', border: '1px solid #707070'}}
+                    type="submit"
+                    size='large'
+                    sx={{ color: '#888888', border: '1px solid #707070' }}
                     className={styles.submitButton}>
                     Enviar
                 </Button>

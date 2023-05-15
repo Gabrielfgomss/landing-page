@@ -1,7 +1,7 @@
 @import '../../../assets/css/variables';
 
 .productComponent {
-    width: 420px;
+
     font-family: "Helvetica", sans-serif;
     color: $grey;
 
@@ -9,6 +9,7 @@
         display: flex;
         flex-direction: row;
         gap: 20px;
+
         &::before,
         &::after {
             content: "";
@@ -19,50 +20,46 @@
     }
 
     .productContainer {
-        
+
         .cardContainer {
             display: flex;
             gap: 20px;
-            height: 129px;
-            margin: 30px auto;
-            width: 392px;
-            flex-wrap: wrap;
-            
+            margin: 30px 16px;
+
             img {
                 object-fit: contain;
-                height: 129px;
-                width: 169px;
                 border: 1px solid $light-grey;
             }
-    
+
             .cardContent {
-                width: 200px;
-    
+
+                flex-grow: 1;
+
                 p {
                     margin: 0px;
                     line-height: 1;
                 }
-    
+
                 :nth-child(1) {
-                    font-size: 14px;
+                    font-size: 1rem;
                     margin-bottom: 15px;
                 }
-    
+
                 :nth-child(3) {
                     font-size: 12px;
                 }
-    
+
                 :nth-child(4) {
                     font-size: 16px;
                     font-weight: bold;
                     margin: 7px 0px;
                 }
-    
+
                 :nth-child(5) {
                     font-size: 12px;
                 }
             }
-    
+
             .button {
                 align-self: end;
                 border: 1px solid #707070;
@@ -70,10 +67,10 @@
                 height: 30px;
                 margin-top: 16px;
                 text-transform: none;
-                width: 200px;
+                width: 100%;
             }
         }
-    
+
     }
 
     .addButton {
@@ -82,34 +79,48 @@
         display: block;
         margin: 50px auto 0px auto;
         text-transform: none;
-        width: 260px;
+
     }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 475px) {
+    body {
+        font-size: 16px;
+    }
+
+    .cardContainer {
+        align-items: center;
+    }
+
+    img {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .productComponent {
-        width: 920px;
-        margin: auto;
+        margin: 0px 15%;
 
         .productContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            row-gap: 40px;
-            margin-top: 50px;
-            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
             .cardContainer {
-                margin: 0px;
-                gap: 0px;
-                height: 350px;
-                width: 201px;
+                flex-direction: column;
 
                 img {
-                    width: 200px;
-                    height: 150px;
-                    margin-bottom: 14px;
+                    width: 50%;
                 }
             }
         }
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .productComponent {
+        .productContainer {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
 }

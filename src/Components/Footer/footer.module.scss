@@ -8,19 +8,11 @@ footer {
     height: 157px;
     justify-content: center;
     padding-top: 85px;
-    width: 420px;
 
     h2 {
         color: $white;
         font-size: 12px;
         margin: 0;
         text-align: center;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-    footer {
-        width: 100vw;
-        height: 230px;
     }
 }
